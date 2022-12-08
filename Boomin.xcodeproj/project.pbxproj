@@ -15,9 +15,9 @@
 		F950956229407DCD0057DFC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F950956029407DCD0057DFC8 /* LaunchScreen.storyboard */; };
 		F950956A29407F030057DFC8 /* SongTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F950956929407F030057DFC8 /* SongTableViewController.swift */; };
 		F950956C294082EB0057DFC8 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = F950956B294082EB0057DFC8 /* Song.swift */; };
-		F950957229408AC70057DFC8 /* Superhero(Future&Metro).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F950957129408AC70057DFC8 /* Superhero(Future&Metro).mp3 */; };
 		F950957429408AD30057DFC8 /* Raindrops(Travis&Metro).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F950957329408AD30057DFC8 /* Raindrops(Travis&Metro).mp3 */; };
 		F950957629408ADE0057DFC8 /* TooManyNights(Future&Metro).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F950957529408ADE0057DFC8 /* TooManyNights(Future&Metro).mp3 */; };
+		F98308BD2941AA3300C68AF1 /* Superhero(Future&Metro).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F98308BC2941AA3300C68AF1 /* Superhero(Future&Metro).mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +31,9 @@
 		F950956329407DCD0057DFC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F950956929407F030057DFC8 /* SongTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewController.swift; sourceTree = "<group>"; };
 		F950956B294082EB0057DFC8 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
-		F950957129408AC70057DFC8 /* Superhero(Future&Metro).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Superhero(Future&Metro).mp3"; sourceTree = "<group>"; };
 		F950957329408AD30057DFC8 /* Raindrops(Travis&Metro).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Raindrops(Travis&Metro).mp3"; sourceTree = "<group>"; };
 		F950957529408ADE0057DFC8 /* TooManyNights(Future&Metro).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "TooManyNights(Future&Metro).mp3"; sourceTree = "<group>"; };
+		F98308BC2941AA3300C68AF1 /* Superhero(Future&Metro).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Superhero(Future&Metro).mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,9 +73,9 @@
 				F950956F294083AC0057DFC8 /* Views */,
 				F950957029408AA40057DFC8 /* Supporting Files */,
 				F950956329407DCD0057DFC8 /* Info.plist */,
-				F950957129408AC70057DFC8 /* Superhero(Future&Metro).mp3 */,
 				F950957329408AD30057DFC8 /* Raindrops(Travis&Metro).mp3 */,
 				F950957529408ADE0057DFC8 /* TooManyNights(Future&Metro).mp3 */,
+				F98308BC2941AA3300C68AF1 /* Superhero(Future&Metro).mp3 */,
 			);
 			path = Boomin;
 			sourceTree = "<group>";
@@ -83,8 +83,8 @@
 		F950956D294083100057DFC8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F950955929407DCC0057DFC8 /* PlayerViewController.swift */,
 				F950956929407F030057DFC8 /* SongTableViewController.swift */,
+				F950955929407DCC0057DFC8 /* PlayerViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -172,10 +172,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F950957229408AC70057DFC8 /* Superhero(Future&Metro).mp3 in Resources */,
 				F950956229407DCD0057DFC8 /* LaunchScreen.storyboard in Resources */,
 				F950955F29407DCD0057DFC8 /* Assets.xcassets in Resources */,
 				F950955D29407DCC0057DFC8 /* Main.storyboard in Resources */,
+				F98308BD2941AA3300C68AF1 /* Superhero(Future&Metro).mp3 in Resources */,
 				F950957629408ADE0057DFC8 /* TooManyNights(Future&Metro).mp3 in Resources */,
 				F950957429408AD30057DFC8 /* Raindrops(Travis&Metro).mp3 in Resources */,
 			);

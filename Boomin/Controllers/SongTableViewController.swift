@@ -49,4 +49,21 @@ class SongTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        performSegue(withIdentifier: "songToPlayer", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let playerVC = segue.destination as! PlayerViewController
+        
+        if let selectedImage = self.tableView.indexPathForSelectedRow {
+            
+            playerVC.inputCover = UIImage(named: songs[selectedImage.row].coverName)
+            playerVC.songs = self.songs
+            playerVC.songRow = selectedImage.row
+        }
+    }
+    
 }
