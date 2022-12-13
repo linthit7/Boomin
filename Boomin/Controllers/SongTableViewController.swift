@@ -24,6 +24,7 @@ class SongTableViewController: UITableViewController {
         title = "Boomin"
         tableView.separatorInset = UIEdgeInsets()
         
+        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -46,6 +47,7 @@ class SongTableViewController: UITableViewController {
         cell.imageView?.image = UIImage(named: aSong.coverName)
         
         
+        
         return cell
     }
     
@@ -58,11 +60,12 @@ class SongTableViewController: UITableViewController {
         
         let playerVC = segue.destination as! PlayerViewController
         
-        if let selectedImage = self.tableView.indexPathForSelectedRow {
+        if let selectedSong = self.tableView.indexPathForSelectedRow {
             
-            playerVC.inputCover = UIImage(named: songs[selectedImage.row].coverName)
             playerVC.songs = self.songs
-            playerVC.songRow = selectedImage.row
+            
+            playerVC.inputCover = UIImage(named: songs[selectedSong.row].coverName)
+            playerVC.songRow = selectedSong.row
         }
     }
     
