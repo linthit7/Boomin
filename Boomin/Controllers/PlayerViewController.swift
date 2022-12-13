@@ -10,14 +10,20 @@ import AVFoundation
 
 class PlayerViewController: UIViewController {
     
+    //MARK: - Properties
+    
     var songs: [Song]?
     var songRow: Int?
     var inputCover: UIImage?
     var player: AVAudioPlayer?
     
+    //MARK: - IBOutlets
+
     @IBOutlet weak var songLabel: UILabel!
     @IBOutlet weak var coverView: UIImageView!
     
+    //MARK: - View Lifecycle Methods
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,22 +32,28 @@ class PlayerViewController: UIViewController {
         playSong(at: songRow!)
     }
     
+    //MARK: - IBActions
+    
     @IBAction func playButtonPressed(_ sender: UIButton) {
         
         playOrStopSong(at: songRow!)
+        
     }
     
     @IBAction func forwardButtonPressed(_ sender: UIButton) {
         
         skipSong(at: songRow!)
+        songLabelAndCover()
     }
     
     @IBAction func backwardButtonPressed(_ sender: UIButton) {
         
         rewindSong(at: songRow!)
+        songLabelAndCover()
     }
     
-    
+    //MARK: - Song Manipulation Methods
+
     func playSong(at row: Int) {
         let trackName = songs![row].trackName
         let url = Bundle.main.url(forResource: trackName, withExtension: "mp3")
@@ -104,5 +116,14 @@ class PlayerViewController: UIViewController {
             playSong(at: row)
         }
     }
+    
+    //MARK: - UI Changing Methods
+    
+    func songLabelAndCover() {
+        
+        coverView.image = UIImage(named: songs![self.songRow!].coverName)
+        songLabel.text = songs![self.songRow!].name
+    }
+    
     
 }

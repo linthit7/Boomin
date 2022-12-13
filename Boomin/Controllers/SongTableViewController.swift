@@ -10,6 +10,8 @@ import UIKit
 
 class SongTableViewController: UITableViewController {
     
+    //MARK: - Properties
+    
     var songs = [
         Song(name: "Superhero", feature: "Metro Boomin & Future", trackName: "Superhero(Future&Metro)", coverName: "Heroes&Villains"),
         
@@ -17,7 +19,8 @@ class SongTableViewController: UITableViewController {
         
         Song(name: "Too Many Nights", feature: "Metro Boomin & Future", trackName: "Superhero(Future&Metro)", coverName: "Heroes&Villains")
     ]
-    
+    //MARK: - View Lifecycle Methods
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,6 +29,8 @@ class SongTableViewController: UITableViewController {
         
         
     }
+    
+    //MARK: - Tableview Datasource Methods
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return songs.count
@@ -36,7 +41,6 @@ class SongTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
         let aSong = songs[indexPath.row]
@@ -46,8 +50,6 @@ class SongTableViewController: UITableViewController {
         cell.detailTextLabel?.text = aSong.feature
         cell.imageView?.image = UIImage(named: aSong.coverName)
         
-        
-        
         return cell
     }
     
@@ -56,6 +58,8 @@ class SongTableViewController: UITableViewController {
         performSegue(withIdentifier: "songToPlayer", sender: self)
     }
     
+    //MARK: - UI Segue Methods
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let playerVC = segue.destination as! PlayerViewController
